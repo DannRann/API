@@ -1,4 +1,5 @@
 //index.js
+import roteadorLogin from "./routes/login.js";
 import roteadorUsuario from "./routes/usuario.js";
 import dotenv from "dotenv";
 import express from "express";      // Requisição do pacote do express
@@ -23,3 +24,5 @@ app.listen(port, () => {            // Um socket para "escutar" as requisições
 });
 
 app.use(roteadorUsuario);
+
+app.use(roteadorLogin)
